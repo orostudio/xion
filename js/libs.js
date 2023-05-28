@@ -132,7 +132,7 @@ $(document).ready(function () {
     $(document).ready(function () {
         $(".movie__description-data_full").wTextSlicer({
             height: "110",
-            textExpand: "Развернуть сюжет",
+            textExpand: "Expandir gráfico",
             textHide: "Свернуть сюжет",
         });
     });
