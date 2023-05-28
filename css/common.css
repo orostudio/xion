@@ -1,0 +1,391 @@
+@font-face {
+    font-family: 'Circe';
+    src: url('../webfonts/Circe-Regular.eot');
+    src: local('Circe'), local('Circe-Regular'), url('../webfonts/Circe-Regular.eot?#iefix') format('embedded-opentype'), url('../webfonts/Circe-Regular.woff') format('woff'), url('../webfonts/Circe-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../webfonts/Circe-ExtraLight.eot');
+    src: local('Circe ExtraLight'), local('Circe-ExtraLight'), url('../webfonts/Circe-ExtraLight.eot?#iefix') format('embedded-opentype'), url('../webfonts/Circe-ExtraLight.woff') format('woff'), url('../webfonts/Circe-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../webfonts/Circe-Thin.eot');
+    src: local('Circe Thin'), local('Circe-Thin'), url('../webfonts/Circe-Thin.eot?#iefix') format('embedded-opentype'), url('../webfonts/Circe-Thin.woff') format('woff'), url('../webfonts/Circe-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../webfonts/Circe-Light.eot');
+    src: local('Circe Light'), local('Circe-Light'), url('../webfonts/Circe-Light.eot?#iefix') format('embedded-opentype'), url('../webfonts/Circe-Light.woff') format('woff'), url('../webfonts/Circe-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../webfonts/Circe-Bold.eot');
+    src: local('Circe Bold'), local('Circe-Bold'), url('../webfonts/Circe-Bold.eot?#iefix') format('embedded-opentype'), url('../webfonts/Circe-Bold.woff') format('woff'), url('../webfonts/Circe-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../webfonts/Circe-ExtraBold.eot');
+    src: local('Circe ExtraBold'), local('Circe-ExtraBold'), url('../webfonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../webfonts/Circe-ExtraBold.woff') format('woff'), url('../webfonts/Circe-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* RESET, BASIC UI SETTINGS
+----------------------------------------------- */
+:root {
+    --main-color: #2196f3;
+    --main-color-hover: #00bcd4;
+    --medium-color: rgba(86,92,103,.16);
+    --two-medium-color: rgb(86 92 103 / 32%);
+    --bg-main-color: #191a1d;
+}
+
+* {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img, table, iframe, video, frame, embed, object {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: normal;
+    font-family: Circe,sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    background: #191a1d;
+    min-height: 100%;
+    width: 100%;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+body.modal-opened {
+    overflow: hidden;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f7f7f7;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+::selection {
+    background: #f6e58d;
+    color: #000;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+button, select, textarea, input[type="text"], input[type="password"], input[type="button"], input[type="submit"] {
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+button:not(.btn-vion):not(.header__seatch_submit):not([class*="fr"]):not([class*="jGrowl"]):not(.searchbox__btn):not([class*="fancybox"]):not([class*="slick-custom-arrow"]):not(.form__btn):not([id*="mceu"]), .button, .btn, input[type="button"]:not(.form__btn), input[type="reset"], input[type="submit"] {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    background: var(--main-color);
+    box-shadow: 0 4px 12px var(--main-color);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+button:not(.btn-vion):not(.header__seatch_submit):not([class*="fr"]):not([class*="plyr"]):not(.search-btn):not([class*="fancybox"]):not([class*="slick-custom-arrow"]):not(.form__btn):not([id*="mceu"]):hover, .button:hover, .btn:hover, input[type="button"]:not(.form__btn):hover, input[type="reset"]:hover, input[type="submit"]:hover {
+    background-color: var(--main-color-hover);
+    box-shadow: 0 4px 12px var(--main-color-hover);
+    color: #fff;
+}
+
+button:active, input[type="button"]:active, input[type="submit"]:active {
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="password"] {
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    padding: 0 15px;
+}
+
+select {
+    height: 40px;
+    padding: 0 15px;
+    display: block;
+}
+
+select:not([multiple]) {
+    background-image: url(../dleimages/chevron.svg);
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 0.6em auto;
+}
+
+select option {
+    padding: 6px 10px;
+}
+
+select[multiple] {
+    padding: 0 5px;
+}
+
+textarea {
+    padding: 15px;
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+input[type="text"], input[type="password"], select, textarea {
+    color: #999;
+    width: 100%;
+    background-color: var(--medium-color);
+}
+
+/* input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    box-shadow: inset 0 0 0 1px #ea2600, inset 1px 2px 5px rgba(0, 0, 0, 0.1);
+} */
+input::placeholder, textarea::placeholder {
+    color: #999;
+    opacity: 0.5;
+    font-size: 1.4rem;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: transparent;
+}
+
+/* SNIPPETS
+----------------------------------------------- */
+
+[data-src] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+[data-src].lazy-loaded {
+    opacity: 1;
+}
+
+.img-box, .img-wide, .img-responsive, .img-fit-cover {
+    overflow: hidden;
+    position: relative;
+}
+
+.img-responsive {
+    padding-top: 60%;
+}
+
+.img-responsive-portrait {
+    padding-top: 140%;
+}
+
+.img-box > img, .img-responsive > img {
+    width: 100%;
+    min-height: 100%;
+    display: block;
+}
+
+.img-responsive > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.img-wide img, .img-wide > a {
+    width: 100%;
+    display: block;
+}
+
+.img-fit-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clr {
+    clear: both;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ws-nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-flex, #dle-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.fd-column {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.jc-flex-start, #dle-content {
+    justify-content: flex-start;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.js-flex-end {
+    justify-content: flex-end;
+}
+
+.ai-flex-start {
+    align-items: flex-start;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.ai-baseline {
+    align-items: baseline;
+}
+
+.order-first {
+    order: -1;
+}
+
+.order-last {
+    order: 10;
+}
+
+.flex-grow-1, .fx-1, .stretch-free-width {
+    flex: 1 1 0;
+    max-width: 100%;
+    min-width: 50px;
+}
+
+.icon-at-left [class*="fa-"], .icon-left .icon {
+    margin-right: 10px;
+}
+
+.icon-at-right [class*="fa-"], .icon-right .icon {
+    margin-left: 10px;
+}
+
+.hidden, #dofullsearch, .form__header .form__btn, body > img {
+    display: none;
+}
+
+.animated-element, button, .btn, .logo, .menu a, .footer__menu a, .card__title span, .header__register-link {
+    transition: all 0.3s;
+}
+
+.fx-row {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+#dle-content > *:not(.item), #dle-content {
+    width: 100%;
+}
+
+#dle-content, .d-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(140px,1fr));
+    grid-gap: 20px 20px;
+    grid-auto-flow: row dense;
+}
+
+#dle-content > *:not(.movie-item) {
+    grid-column: 1 / -1;
+}
+
+#searchsuggestions > *:not(.item), #searchsuggestions {
+    width: 100%;
+}
+
+#searchsuggestions, .d-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(140px,1fr));
+    grid-gap: 20px 20px;
+    grid-auto-flow: row dense;
+}
+
+#searchsuggestions > *:not(.movie-item) {
+    grid-column: 1 / -1;
+}
